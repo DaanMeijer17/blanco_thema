@@ -14,6 +14,15 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
+  <?php wp_footer(); ?>
+
+  
+<?php include 'C:\Users\DMeijer\Desktop\daanmeijer.test\wp-includes\slider.php'; ?>
+<?php include 'C:\Users\DMeijer\Desktop\daanmeijer.test\wp-includes\card-groups.php'; ?>
+<?php include 'C:\Users\DMeijer\Desktop\daanmeijer.test\wp-includes\card-columns.php'; ?>
+
+
+
 	<?php blanco_thema_post_thumbnail(); ?>
 
 	<div class="entry-content">
@@ -50,3 +59,4 @@
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>
 </article><!-- #post-<?php the_ID(); ?> -->
+

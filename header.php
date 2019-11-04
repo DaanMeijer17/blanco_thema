@@ -16,15 +16,45 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
-
-<body <?php body_class(); ?>>
+<header>
+<nav class="navbar navbar-expand-sm navbar-light bg-light">
+	<a class="navbar-brand" href="#">Company Logo</a>
+	<button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+		aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="collapsibleNavId">
+		<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+			<li class="nav-item active">
+				<a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/content">content</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/content-2">content2</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/agenda">Agenda</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/contact">Contact</a>
+			</li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+				<div class="dropdown-menu" aria-labelledby="dropdownId">
+					<a class="dropdown-item" href="/contact">Contact</a>
+					<a class="dropdown-item" href=".agenda">Agenda</a>
+				</div>
+			</li>
+		</ul>
+		<body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'blanco-thema' ); ?></a>
 
 	<header id="masthead" class="site-header">
+	<div class="mx-auto"></div>
 		<div class="site-branding">
 			<?php
 			the_custom_logo();
@@ -43,16 +73,12 @@
 				<p class="site-description"><?php echo $blanco_thema_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'blanco-thema' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
+		</div>
+		<div>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="text" placeholder="Search">
+			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	</div>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">

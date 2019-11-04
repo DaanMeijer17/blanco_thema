@@ -126,7 +126,6 @@ function blanco_thema_scripts() {
 	wp_enqueue_script('blanco-thema-popperjs-script', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/esm/popper-utils.min.js', array(), $theme_data->Version, true);
 	wp_enqueue_script('blanco-thema-bootstrap-script', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js', array(), $theme_data->Version, true);
 
-
 	wp_enqueue_style( 'blanco-thema-bootstrap-style', 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css');
 
 	wp_enqueue_style( 'blanco-thema-style', get_stylesheet_uri() );
